@@ -89,9 +89,7 @@ const About = () => {
                 <div className="mt-8 p-6 bg-background/50 rounded-lg border border-border/50">
                   <h4 className="text-lg font-semibold mb-4 text-primary">Current Status</h4>
                   <p className="text-muted-foreground">
-                    Currently pursuing my Master's at NYU while working as a Software Developer 
-                    Intern at Healium Intelliscan Corp, where I'm building cutting-edge medical 
-                    image processing pipelines.
+                  I'm now studying for my Master's in Computer Science while investigating the latest AI and machine learning technologies. enthusiastic about conducting research, coming up with creative solutions to problems, and creating intelligent systems.
                   </p>
                 </div>
               </CardContent>

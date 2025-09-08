@@ -5,7 +5,7 @@ const Experience = () => {
   const experiences = [{
     title: "Software Developer Intern",
     company: "Healium Intelliscan Corp",
-    period: "2025 – Present",
+    period: "2025",
     location: "New York, USA",
     description: "Built medical image pipelines, reduced preprocessing time by 79%.",
     achievements: ["Developed advanced medical image processing algorithms", "Optimized data pipelines for real-time analysis", "Implemented computer vision solutions for diagnostic tools"],
