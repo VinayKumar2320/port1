@@ -57,7 +57,7 @@ export const MedFlowSimulator: React.FC = () => {
           <div>LOAD FACTOR: <span className="font-bold text-foreground">{stats.loadFactor}</span></div>
           <div>CENSUS: <span className="font-bold text-foreground">{stats.bedUtilization}% BEDS</span></div>
           <a
-            href="https://medflow-dashboard.onrender.com"
+            href="https://medflow-dashboard-eyyu.onrender.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-cobalt hover:underline"

@@ -95,7 +95,7 @@ export const PROJECTS: Project[] = [
     tech: ["Python 3.12", "SimPy 4.1", "Google OR-Tools", "LightGBM", "FastAPI", "React 19", "TypeScript", "Render Cloud"],
     links: {
       github: "https://github.com/VinayKumar2320/MedFlow-AI-Hospital-Digital-Twin",
-      liveDemo: "https://medflow-dashboard.onrender.com",
+      liveDemo: "https://medflow-dashboard-eyyu.onrender.com/",
       apiDocs: "https://medflow-api-kgsv.onrender.com/docs"
     },
     simulatorType: "hospital"
