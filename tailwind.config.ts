@@ -1,18 +1,23 @@
 import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
-  prefix: "",
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.5rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1360px",
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        display: ["Space Grotesk", "Plus Jakarta Sans", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -27,10 +32,6 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -39,23 +40,26 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        cobalt: {
+          DEFAULT: "#2563EB",
+          dark: "#1D4ED8",
+          light: "#60A5FA",
+        },
+        amber: {
+          DEFAULT: "#F59E0B",
+          dark: "#D97706",
+        },
+        orange: {
+          DEFAULT: "#F97316",
+          dark: "#EA580C",
+        },
+        emerald: {
+          DEFAULT: "#10B981",
+          dark: "#059669",
         },
       },
       borderRadius: {
@@ -63,122 +67,17 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
-        },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
-        "fade-in": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(20px)"
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)"
-          }
-        },
-        "slide-in": {
-          "0%": {
-            opacity: "0",
-            transform: "translateX(-20px)"
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateX(0)"
-          }
-        },
-        "glow": {
-          "0%, 100%": {
-            boxShadow: "0 0 20px hsl(var(--primary) / 0.3)"
-          },
-          "50%": {
-            boxShadow: "0 0 40px hsl(var(--primary) / 0.5)"
-          }
-        },
-        "float": {
-          "0%, 100%": {
-            transform: "translateY(0px)"
-          },
-          "50%": {
-            transform: "translateY(-10px)"
-          }
-        },
-        "pulse-glow": {
-          "0%": {
-            boxShadow: "0 0 10px hsl(var(--primary) / 0.2)",
-            opacity: "0.8"
-          },
-          "100%": {
-            boxShadow: "0 0 30px hsl(var(--primary) / 0.4)",
-            opacity: "1"
-          }
-        },
-        "shimmer": {
-          "0%": {
-            backgroundPosition: "-200% 0"
-          },
-          "100%": {
-            backgroundPosition: "200% 0"
-          }
-        },
-        "border-rotate": {
-          "0%": {
-            transform: "rotate(0deg)"
-          },
-          "100%": {
-            transform: "rotate(360deg)"
-          }
-        },
-        "wave": {
-          "0%, 100%": {
-            transform: "translateY(0)"
-          },
-          "50%": {
-            transform: "translateY(-20px)"
-          }
-        },
-        "spotlight": {
-          "0%": {
-            opacity: "0",
-            transform: "scale(0.5)"
-          },
-          "50%": {
-            opacity: "1",
-            transform: "scale(1.1)"
-          },
-          "100%": {
-            opacity: "0",
-            transform: "scale(1)"
-          }
-        }
+      boxShadow: {
+        editorial: "0 20px 40px -15px rgba(0, 0, 0, 0.07)",
+        tactile: "0 2px 0 0 rgba(0, 0, 0, 0.08)",
+        floating: "0 25px 50px -12px rgba(18, 19, 22, 0.18)",
+        blueprint: "inset 0 0 0 1px rgba(37, 99, 235, 0.15)",
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out",
-        "slide-in": "slide-in 0.6s ease-out",
-        "glow": "glow 2s ease-in-out infinite",
-        "float": "float 8s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite alternate",
-        "shimmer": "shimmer 3s linear infinite",
-        "border-rotate": "border-rotate 4s linear infinite",
-        "wave": "wave 4s ease-in-out infinite",
-        "spotlight": "spotlight 6s ease-in-out infinite",
+      backgroundImage: {
+        "grid-pattern": "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)",
+        "grid-pattern-dark": "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 } satisfies Config;

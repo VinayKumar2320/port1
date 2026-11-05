@@ -1,112 +1,162 @@
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
-import profileImage from "@/assets/vinay-profile.jpg";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Terminal, Download, ArrowDown, Sparkles, ExternalLink, ShieldCheck, Activity } from 'lucide-react';
 
-const Hero = () => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+interface HeroProps {
+  onOpenTerminal: () => void;
+  onToggleRecruiterMode: () => void;
+  isRecruiterMode: boolean;
+}
+
+export const Hero: React.FC<HeroProps> = ({
+  onOpenTerminal,
+  onToggleRecruiterMode,
+  isRecruiterMode,
+}) => {
+  const [draggedCount, setDraggedCount] = useState(0);
+
+  const physicsBadges = [
+    { id: 'nyu', label: '🗽 NYU Tandon MS CS', bg: 'bg-purple-600/10 text-purple-700 dark:text-purple-300 border-purple-500/30' },
+    { id: 'graph', label: '⚡ Graph Intelligence (PyG)', bg: 'bg-blue-600/10 text-blue-700 dark:text-blue-300 border-blue-500/30' },
+    { id: 'sim', label: '🏥 SimPy 4.1 Digital Twin', bg: 'bg-emerald-600/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30' },
+    { id: 'agent', label: '🧠 LangGraph Autonomous Agent', bg: 'bg-orange-600/10 text-orange-700 dark:text-orange-300 border-orange-500/30' },
+    { id: 'kafka', label: '🚀 Apache Kafka Streaming', bg: 'bg-slate-700/10 text-slate-800 dark:text-slate-200 border-slate-600/30' },
+    { id: 'shap', label: '📊 TreeSHAP + XGBoost', bg: 'bg-amber-600/10 text-amber-700 dark:text-amber-300 border-amber-500/30' },
+    { id: 'trainium', label: '🔬 AWS Trainium2 & SymPy', bg: 'bg-cyan-600/10 text-cyan-700 dark:text-cyan-300 border-cyan-500/30' },
+    { id: 'cv', label: '🛰️ Computer Vision & AR', bg: 'bg-rose-600/10 text-rose-700 dark:text-rose-300 border-rose-500/30' },
+  ];
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 bg-grid-primary/[0.03] bg-[size:50px_50px]" />
-      <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl floating-animation" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl floating-animation" style={{animationDelay: '2s'}} />
-      <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl floating-animation" style={{animationDelay: '4s'}} />
-      
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Enhanced Profile Image */}
-          <div className="relative animate-fade-in">
-            <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/30 glass-effect floating-animation pulse-glow">
-              <img
-                src={profileImage}
-                alt="Vinay Kumar"
-                className="w-full h-full object-cover"
-              />
+    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 border-b border-border overflow-hidden bg-background">
+      {/* Blueprint Grid Background Pattern */}
+      <div className="absolute inset-0 bg-grid-pattern dark:bg-grid-pattern-dark opacity-70 pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        {/* System Telemetry Bar */}
+        <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded border border-border bg-card shadow-sm font-mono text-xs text-muted-foreground mb-8">
+          <span className="flex h-2 w-2 relative">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+          </span>
+          <span className="font-semibold text-foreground">VINAY.EXE // v2.6.0</span>
+          <span className="text-border">|</span>
+          <span>NYU TANDON CS</span>
+          <span className="text-border">|</span>
+          <span className="hidden sm:inline">NEW YORK, NY</span>
+          <span className="text-border hidden sm:inline">|</span>
+          <span className="text-cobalt font-semibold">PLAYGROUND ACTIVE</span>
+        </div>
+
+        {/* Main Headline */}
+        <div className="max-w-4xl space-y-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground font-display leading-[1.08]">
+            I build systems that <span className="underline decoration-cobalt decoration-4 underline-offset-8">think</span>,{' '}
+            <span className="text-cobalt">simulate</span>, predict, and scale.
+          </h1>
+
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl font-normal">
+            <span className="text-foreground font-semibold">Vinay Kumar</span> — Graduate student at{' '}
+            <span className="text-foreground font-semibold">NYU Tandon School of Engineering</span>. Building at the intersection of{' '}
+            <span className="text-foreground font-medium">Distributed Systems</span>,{' '}
+            <span className="text-foreground font-medium">Graph Intelligence</span>, and{' '}
+            <span className="text-foreground font-medium">Simulation Engineering</span>. Curious by default.
+          </p>
+        </div>
+
+        {/* Physics Playground Area */}
+        <div className="my-10 p-5 rounded-xl border border-border bg-card/60 backdrop-blur-sm relative overflow-hidden">
+          <div className="flex items-center justify-between mb-3 text-xs font-mono text-muted-foreground">
+            <div className="flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <span className="uppercase tracking-wider font-semibold text-foreground">Interactive Physics Sandbox</span>
+              <span className="text-[10px] hidden sm:inline">(Drag & fling items to inspect core domains)</span>
             </div>
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-full opacity-20 blur-xl"></div>
-            {/* Rotating Ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-spin" style={{animationDuration: '8s'}} />
+            <div className="text-[11px]">
+              INTERACTIONS: <span className="font-bold text-foreground font-mono">{draggedCount}</span>
+            </div>
           </div>
 
-          {/* Enhanced Hero Content */}
-          <div className="flex-1 text-center lg:text-left animate-slide-in">
-            <h1 className="text-5xl lg:text-7xl font-black mb-6 text-shadow-soft">
-              <span className="hero-text">Vinay Kumar</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-foreground/80 mb-8 leading-relaxed font-medium">
-              <span className="text-2xl lg:text-3xl font-bold text-primary block mb-2">AI & Machine Learning Engineer</span>
-              <span className="text-blue-600 font-semibold">Data Science Enthusiast</span><br />
-              <span className="text-purple-600 font-semibold">Problem Solver</span>
-            </p>
-            
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
-              <Button
-                onClick={() => scrollToSection("projects")}
-                className="enhanced-button text-white shadow-2xl transform hover:scale-110 transition-all duration-500 px-10 py-4 text-lg font-bold glow-effect"
+          <div className="flex flex-wrap gap-2.5 py-4 min-h-[90px] items-center">
+            {physicsBadges.map((badge) => (
+              <motion.div
+                key={badge.id}
+                drag
+                dragConstraints={{ left: -100, right: 100, top: -50, bottom: 50 }}
+                dragElastic={0.4}
+                whileHover={{ scale: 1.06, cursor: 'grab' }}
+                whileTap={{ scale: 0.96, cursor: 'grabbing' }}
+                onDragStart={() => setDraggedCount((c) => c + 1)}
+                className={`px-3 py-1.5 rounded-lg border text-xs font-mono font-medium shadow-sm select-none transition-shadow ${badge.bg}`}
               >
-                View Projects
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => scrollToSection("contact")}
-                className="morphing-border text-primary hover:bg-primary/10 hover:text-primary px-10 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-500"
-              >
-                Get In Touch
-              </Button>
-            </div>
+                {badge.label}
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
-            {/* Enhanced Social Links */}
-            <div className="flex gap-6 justify-center lg:justify-start">
-              <a
-                href="https://www.linkedin.com/in/vinay-kumar-md-9196711b8/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 group transform hover:scale-110 hover:-translate-y-1"
-                title="LinkedIn Profile"
-              >
-                <Linkedin className="w-6 h-6 text-primary group-hover:text-primary transition-colors" />
-              </a>
-              <a
-                href="https://github.com/VinayKumar2320?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 group transform hover:scale-110 hover:-translate-y-1"
-                title="GitHub Repositories"
-              >
-                <Github className="w-6 h-6 text-primary group-hover:text-primary transition-colors" />
-              </a>
-              <a
-                href="https://scholar.google.com/citations?user=lX3caZQAAAAJ&hl=en&authuser=2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 group transform hover:scale-110 hover:-translate-y-1"
-                title="Google Scholar Profile"
-              >
-                <ExternalLink className="w-6 h-6 text-primary group-hover:text-primary transition-colors" />
-              </a>
-              <a
-                href="mailto:vinaykumarmd02@gmail.com"
-                className="p-3 rounded-full glass-effect hover:bg-primary/20 transition-all duration-300 group transform hover:scale-110 hover:-translate-y-1"
-                title="Send Email"
-              >
-                <Mail className="w-6 h-6 text-primary group-hover:text-primary transition-colors" />
-              </a>
-            </div>
-            
-            {/* Decorative Elements */}
-            <div className="flex justify-center lg:justify-start space-x-2 mt-8">
-              <div className="w-2 h-2 rounded-full bg-primary animate-bounce" />
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-bounce" style={{animationDelay: '0.1s'}} />
-              <div className="w-2 h-2 rounded-full bg-purple-500 animate-bounce" style={{animationDelay: '0.2s'}} />
-            </div>
+        {/* Action Controls & Navigation */}
+        <div className="flex flex-wrap items-center gap-4 pt-2">
+          <button
+            type="button"
+            onClick={() => scrollTo('projects')}
+            className="px-6 py-3 rounded-lg bg-cobalt hover:bg-cobalt-dark text-white font-semibold text-sm flex items-center gap-2 shadow-sm transition-all"
+          >
+            <span>Explore Engineering Lab</span>
+            <ArrowDown className="w-4 h-4" />
+          </button>
+
+          <button
+            type="button"
+            onClick={onOpenTerminal}
+            className="px-5 py-3 rounded-lg border border-border bg-card hover:bg-secondary text-foreground font-mono text-sm font-medium flex items-center gap-2 shadow-sm transition-all"
+          >
+            <Terminal className="w-4 h-4 text-cobalt" />
+            <span>Open Terminal (`~`)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={onToggleRecruiterMode}
+            className="px-5 py-3 rounded-lg border border-border bg-card hover:bg-secondary text-foreground text-sm font-medium flex items-center gap-2 shadow-sm transition-all"
+          >
+            <Activity className="w-4 h-4 text-emerald-500" />
+            <span>Recruiter Mode {isRecruiterMode ? '(ON)' : '(OFF)'}</span>
+          </button>
+
+          <a
+            href="/Vinay_Kumar_Resume.pdf"
+            download="Vinay_Kumar_Resume.pdf"
+            className="px-5 py-3 rounded-lg border border-border bg-card hover:bg-secondary text-muted-foreground hover:text-foreground text-sm font-medium flex items-center gap-2 transition-all ml-auto"
+          >
+            <Download className="w-4 h-4" />
+            <span>Resume PDF</span>
+          </a>
+        </div>
+
+        {/* Real Verified Telemetry Stats */}
+        <div className="mt-14 pt-8 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6 font-mono">
+          <div>
+            <div className="text-2xl sm:text-3xl font-bold text-foreground">35</div>
+            <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">Audited GitHub Repos</div>
+          </div>
+          <div>
+            <div className="text-2xl sm:text-3xl font-bold text-foreground">1 Patent</div>
+            <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">AI & IoT Irrigation</div>
+          </div>
+          <div>
+            <div className="text-2xl sm:text-3xl font-bold text-foreground">8 Papers</div>
+            <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">Peer-Reviewed Publications</div>
+          </div>
+          <div>
+            <div className="text-2xl sm:text-3xl font-bold text-emerald-500">3 Demos</div>
+            <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">Live Production Endpoints</div>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
-export default Hero;
