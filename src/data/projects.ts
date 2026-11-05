@@ -169,7 +169,168 @@ export const PROJECTS: Project[] = [
     },
     tech: ["Python 3.12", "LangGraph", "FAISS", "FastAPI", "Docker Compose", "React 18", "OpenTelemetry Traces"],
     links: {
-      github: "https://github.com/VinayKumar2320/autonomous-diagnostics-agent"
+      github: "https://github.com/VinayKumar2320/autonomous-diagnostics-agent",
+      liveDemo: "https://autonomous-diagnostics-agent.vercel.app"
+    }
+  },
+  {
+    id: "octanecredit",
+    title: "Octane Credit",
+    tagline: "Personal Finance Analytics & Credit Score Optimizer",
+    category: "ai-systems",
+    categoryLabel: "Full-Stack FinTech & Analytics",
+    featured: true,
+    date: "2024",
+    summary:
+      "Full-stack financial health platform that parses credit card statements (PDF), categorizes transactions with high accuracy using rule-based mappings and simulated search lookups, and visualizes financial health alongside credit score utilization recommendations.",
+    impactMetrics: [
+      { label: "Statement Parser", value: "Automated PDF", detail: "Sub-second transaction ingestion & parsing" },
+      { label: "Credit Health", value: "Live Scoring", detail: "Dynamic utilization analytics & alerts" },
+      { label: "Architecture", value: "Full-Stack", detail: "React frontend on Vercel + FastAPI backend on Render" }
+    ],
+    architecture: {
+      overview:
+        "React frontend communicating with a containerized FastAPI backend to ingest statements, normalize merchant tokens, categorize expenditure, and simulate debt reduction scenarios.",
+      flowSteps: [
+        "Statement PDF upload and OCR/token parsing",
+        "Merchant normalization and classification heuristics",
+        "Aggregate spending velocity and category breakdown",
+        "Credit score impact simulation and optimization recommendations"
+      ],
+      keyChallenge: "Handling diverse statement layouts and non-standard merchant transaction descriptors across multiple banks."
+    },
+    tech: ["TypeScript", "React 18", "Python", "FastAPI", "Tailwind CSS", "Vercel", "Render"],
+    links: {
+      github: "https://github.com/VinayKumar2320/OctaneCredit",
+      liveDemo: "https://octane-credit-six.vercel.app/",
+      apiDocs: "https://octanecredit.onrender.com/docs"
+    }
+  },
+  {
+    id: "closet-stylist",
+    title: "AI Closet Stylist",
+    tagline: "Multimodal Deep Learning Fashion Recommendation",
+    category: "vision-hci",
+    categoryLabel: "Computer Vision & Multimodal AI",
+    featured: false,
+    date: "2024",
+    summary:
+      "Computer vision fashion intelligence system analyzing wardrobe imagery, segmenting apparel items, extracting color harmonies and style semantics, and generating coordinated outfit pairings.",
+    impactMetrics: [
+      { label: "Segmentation", value: "Apparel Parsing", detail: "Instance-level clothing item isolation" },
+      { label: "Embeddings", value: "Multimodal", detail: "Joint visual and textual style semantic representations" },
+      { label: "Pairing", value: "Graph Harmony", detail: "Color wheel and occasion compatibility scoring" }
+    ],
+    architecture: {
+      overview:
+        "Upload wardrobe photos to automatically detect, catalog, and pair garments based on color theory, weather forecasts, and occasion criteria.",
+      flowSteps: [
+        "Image upload and background subtraction",
+        "Deep learning apparel categorization and feature embedding",
+        "Color histogram and palette compatibility analysis",
+        "Ranked outfit candidate generation"
+      ],
+      keyChallenge: "Handling diverse lighting, folds, and unconstrained photo angles in user-submitted garments."
+    },
+    tech: ["Python", "PyTorch", "Torchvision", "Streamlit", "Scikit-learn"],
+    links: {
+      github: "https://github.com/VinayKumar2320/Smart_fashion_recommender",
+      liveDemo: "https://sfrecommender.streamlit.app/"
+    }
+  },
+  {
+    id: "aurawealth",
+    title: "AuraWealth",
+    tagline: "Stock Research & Risk-Profile Portfolio Allocation Engine",
+    category: "ai-systems",
+    categoryLabel: "Financial Modeling & Allocation",
+    featured: false,
+    date: "2024",
+    summary:
+      "Full-stack equity research and portfolio allocation platform combining curated stock recommendations with sentiment analysis and algorithmic portfolio weighting matching investor risk profiles.",
+    impactMetrics: [
+      { label: "Risk Tiers", value: "3 Profiles", detail: "Conservative, Moderate, and Aggressive models" },
+      { label: "Inference", value: "FastAPI REST", detail: "Sub-second allocation calculations" },
+      { label: "Deployment", value: "Vercel + Render", detail: "Decoupled frontend & backend services" }
+    ],
+    architecture: {
+      overview:
+        "Modern React user interface communicating with a FastAPI backend to ingest market indicators, compute sector weightings, and render interactive portfolio allocation charts.",
+      flowSteps: [
+        "Risk profile and capital allocation selection",
+        "Equity universe sentiment and sector classification",
+        "Risk-adjusted weight vector calculation",
+        "Interactive allocation breakdown & rationale presentation"
+      ],
+      keyChallenge: "Calculating balanced multi-asset allocation weights interactively under dynamic user capital inputs."
+    },
+    tech: ["Python", "FastAPI", "React", "TypeScript", "Tailwind CSS", "Vercel", "Render"],
+    links: {
+      github: "https://github.com/VinayKumar2320/AuraWealth",
+      liveDemo: "https://aurawealth-lovat.vercel.app/"
+    }
+  },
+  {
+    id: "medicare-vision",
+    title: "Medicare Vision AI",
+    tagline: "Healthcare Management with Voice Assistant & OCR",
+    category: "vision-hci",
+    categoryLabel: "Computer Vision & Health Tech",
+    featured: false,
+    date: "2024",
+    summary:
+      "Comprehensive healthcare assistant featuring interactive voice commands for medication tracking, OCR-based prescription scanning, meal planning, and diagnostic blood report analysis.",
+    impactMetrics: [
+      { label: "Prescription OCR", value: "Automated", detail: "Optical character recognition for medication scripts" },
+      { label: "Voice Assistant", value: "Hands-Free", detail: "Interactive voice queries for dosages and meals" },
+      { label: "Deployment", value: "Vercel SPA", detail: "Instant zero-install mobile and desktop access" }
+    ],
+    architecture: {
+      overview:
+        "Client-side OCR processing and speech recognition pipelines integrated into a reactive patient portal for accessible health tracking.",
+      flowSteps: [
+        "Prescription image capture via camera / upload",
+        "OCR text parsing and dosage extraction",
+        "Medication schedule compilation and reminder queue",
+        "Voice query execution and meal plan recommendation"
+      ],
+      keyChallenge: "Parsing imperfect user-submitted photos of paper prescription labels accurately."
+    },
+    tech: ["TypeScript", "React", "Tailwind CSS", "Web Speech API", "Tesseract OCR", "Vercel"],
+    links: {
+      github: "https://github.com/VinayKumar2320/medicare-vision-ai",
+      liveDemo: "https://medicare-vision-ai.vercel.app"
+    }
+  },
+  {
+    id: "air-quality",
+    title: "Air Quality & Behavioral Health",
+    tagline: "Geospatial Epidemiological Correlation Platform",
+    category: "simulation",
+    categoryLabel: "Geospatial Data Science",
+    featured: false,
+    date: "2024",
+    summary:
+      "Interactive geospatial data science platform analyzing statistical correlations between environmental air quality index (AQI) particulate concentrations and regional behavioral health metrics.",
+    impactMetrics: [
+      { label: "Mapping", value: "Choropleth GIS", detail: "Interactive multi-layer geospatial visualization" },
+      { label: "Deployment", value: "GitHub Pages", detail: "High-performance client-side rendering" }
+    ],
+    architecture: {
+      overview:
+        "D3.js and Leaflet-based interactive mapping platform rendering EPA sensor datasets alongside county-level public health indicators.",
+      flowSteps: [
+        "EPA air quality telemetry ingestion",
+        "Census tract geospatial polygon geocoding",
+        "Cross-dataset correlation computation",
+        "Interactive multi-layer choropleth map rendering"
+      ],
+      keyChallenge: "Rendering dense spatial vector geometries smoothly in consumer web browsers without frame drops."
+    },
+    tech: ["JavaScript", "HTML5", "CSS3", "D3.js", "Leaflet", "GitHub Pages"],
+    links: {
+      github: "https://github.com/VinayKumar2320/Air-Quality-Behavioral-Health-Visualization-Project",
+      liveDemo: "https://VinayKumar2320.github.io/Air-Quality-Behavioral-Health-Visualization-Project/"
     }
   },
   {
@@ -267,37 +428,6 @@ export const PROJECTS: Project[] = [
     tech: ["Python", "OpenCV", "MediaPipe", "PyAutoGUI", "SpeechRecognition", "Tkinter"],
     links: {
       github: "https://github.com/VinayKumar2320/VirtualMouse"
-    }
-  },
-  {
-    id: "closet-stylist",
-    title: "AI Closet Stylist",
-    tagline: "Multimodal Deep Learning Fashion Recommendation",
-    category: "vision-hci",
-    categoryLabel: "Computer Vision & Multimodal AI",
-    featured: false,
-    date: "2024",
-    summary:
-      "Computer vision fashion intelligence system analyzing wardrobe imagery, segmenting apparel items, extracting color harmonies and style semantics, and generating coordinated outfit pairings.",
-    impactMetrics: [
-      { label: "Segmentation", value: "Apparel Parsing", detail: "Instance-level clothing item isolation" },
-      { label: "Embeddings", value: "Multimodal", detail: "Joint visual and textual style semantic representations" },
-      { label: "Pairing", value: "Graph Harmony", detail: "Color wheel and occasion compatibility scoring" }
-    ],
-    architecture: {
-      overview:
-        "Upload wardrobe photos to automatically detect, catalog, and pair garments based on color theory, weather forecasts, and occasion criteria.",
-      flowSteps: [
-        "Image upload and background subtraction",
-        "Deep learning apparel categorization and feature embedding",
-        "Color histogram and palette compatibility analysis",
-        "Ranked outfit candidate generation"
-      ],
-      keyChallenge: "Handling diverse lighting, folds, and unconstrained photo angles in user-submitted garments."
-    },
-    tech: ["Python", "PyTorch", "Torchvision", "Streamlit", "Scikit-learn"],
-    links: {
-      github: "https://github.com/VinayKumar2320/Smart_fashion_recommender"
     }
   }
 ];

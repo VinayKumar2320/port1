@@ -342,6 +342,16 @@ export const ProjectPlayground: React.FC = () => {
                               Launch Demo →
                             </button>
                           )}
+                          {p.links.liveDemo && (
+                            <a
+                              href={p.links.liveDemo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono font-bold text-[10px] hover:underline flex items-center gap-1"
+                            >
+                              Live App <ExternalLink className="w-2.5 h-2.5" />
+                            </a>
+                          )}
                           <a
                             href={p.links.github}
                             target="_blank"

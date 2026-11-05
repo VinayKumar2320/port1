@@ -152,7 +152,7 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">Peer-Reviewed Publications</div>
           </div>
           <div>
-            <div className="text-2xl sm:text-3xl font-bold text-emerald-500">3 Demos</div>
+            <div className="text-2xl sm:text-3xl font-bold text-emerald-500">9 Demos</div>
             <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">Live Production Endpoints</div>
           </div>
         </div>

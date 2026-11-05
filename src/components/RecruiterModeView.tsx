@@ -180,7 +180,7 @@ export const RecruiterModeView: React.FC<RecruiterModeViewProps> = ({ onExitRecr
             03 // FLAGSHIP SYSTEMS & ENGINEERING WORK
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {PROJECTS.slice(0, 4).map((p) => (
+            {PROJECTS.filter((p) => p.featured || p.links.liveDemo).map((p) => (
               <div key={p.id} className="p-6 rounded-xl border border-border bg-card flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono text-muted-foreground mb-1">
