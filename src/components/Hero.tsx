@@ -46,9 +46,9 @@ export const Hero: React.FC<HeroProps> = ({
           <span className="text-border">|</span>
           <span>NYU TANDON CS</span>
           <span className="text-border">|</span>
-          <span className="hidden sm:inline">NEW YORK, NY</span>
+          <span className="text-emerald-600 dark:text-emerald-400 font-semibold">SEEKING NEW GRAD ROLES</span>
           <span className="text-border hidden sm:inline">|</span>
-          <span className="text-cobalt font-semibold">PLAYGROUND ACTIVE</span>
+          <span className="text-cobalt font-semibold hidden sm:inline">PLAYGROUND ACTIVE</span>
         </div>
 
         {/* Main Headline */}
@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({
             <span className="text-foreground font-semibold">NYU Tandon School of Engineering</span>. Building at the intersection of{' '}
             <span className="text-foreground font-medium">Distributed Systems</span>,{' '}
             <span className="text-foreground font-medium">Graph Intelligence</span>, and{' '}
-            <span className="text-foreground font-medium">Simulation Engineering</span>. Curious by default.
+            <span className="text-foreground font-medium">Simulation Engineering</span>. <span className="text-foreground font-semibold">Currently seeking New Grad roles in Software Engineering & AI/ML Systems.</span>
           </p>
         </div>
 

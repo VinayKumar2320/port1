@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink, Copy, Check, Send } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, ExternalLink, Copy, Check, Send, Sparkles } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -66,24 +66,21 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Phone Card */}
+                {/* Opportunity Status Card */}
                 <div className="p-4 rounded-xl border border-border bg-secondary/30 flex flex-col justify-between space-y-3">
                   <div>
                     <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
-                      <Phone className="w-4 h-4 text-emerald-500" />
-                      <span>MOBILE CONTACT</span>
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span>OPPORTUNITY STATUS</span>
                     </div>
-                    <div className="text-base font-bold text-foreground font-mono mt-1">
-                      +1 (347) 940-9376
+                    <div className="text-base font-bold text-foreground font-display mt-1">
+                      Seeking New Grad Roles
                     </div>
                   </div>
                   <div className="pt-2">
-                    <a
-                      href="tel:+13479409376"
-                      className="inline-flex px-3 py-1.5 rounded-lg border border-border bg-background hover:bg-secondary text-foreground font-mono text-xs font-semibold items-center gap-1.5 transition-all"
-                    >
-                      Call Mobile
-                    </a>
+                    <span className="inline-flex px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 font-mono text-xs font-semibold items-center gap-1.5">
+                      Open to Relocation & Remote
+                    </span>
                   </div>
                 </div>
               </div>
@@ -152,10 +149,10 @@ export const ContactSection: React.FC = () => {
             <div className="p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 font-mono text-xs space-y-2">
               <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold uppercase">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Current Availability</span>
+                <span>Current Opportunity Status</span>
               </div>
               <p className="text-foreground/80 font-sans text-xs leading-relaxed">
-                Actively seeking Software Engineering, AI/ML Platform, and Distributed Systems roles starting Summer 2027 / Internships 2026.
+                Currently seeking full-time New Grad roles in Software Engineering, AI/ML Systems, and Distributed Systems.
               </p>
             </div>
           </div>

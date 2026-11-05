@@ -8,7 +8,6 @@ import { SKILL_CATEGORIES } from '@/data/skills';
 import {
   Download,
   Mail,
-  Phone,
   MapPin,
   Linkedin,
   Github,
@@ -67,7 +66,7 @@ export const RecruiterModeView: React.FC<RecruiterModeViewProps> = ({ onExitRecr
                 Software & AI/ML Systems Engineer · M.S. Computer Science @ NYU Tandon
               </p>
               <p className="text-sm text-muted-foreground mt-3 max-w-2xl leading-relaxed">
-                Graduate student at New York University specializing in distributed systems, real-time graph intelligence, and simulation engineering. 3 industry internships (Healium, KreditBee, 369 Data), 1 patent, 8 peer-reviewed research papers, and 2nd place in the national Smart India Hackathon.
+                Graduate student at New York University specializing in distributed systems, real-time graph intelligence, and simulation engineering. 3 industry internships (Healium, KreditBee, 369 Data), 1 patent, 8 peer-reviewed research papers. <span className="text-foreground font-semibold">Currently seeking New Grad roles in Software Engineering, AI/ML Systems, and Distributed Systems.</span>
               </p>
             </div>
 
@@ -83,9 +82,9 @@ export const RecruiterModeView: React.FC<RecruiterModeViewProps> = ({ onExitRecr
                   vinaykumarmd02@gmail.com
                 </a>
               </div>
-              <div className="flex items-center gap-2 text-foreground">
-                <Phone className="w-3.5 h-3.5 text-muted-foreground" />
-                <span>+1 (347) 940-9376</span>
+              <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Seeking New Grad Roles</span>
               </div>
               <div className="flex items-center gap-3 pt-2 border-t border-border">
                 <a

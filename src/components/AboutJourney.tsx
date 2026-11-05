@@ -76,7 +76,7 @@ export const AboutJourney: React.FC = () => {
                 <span>NYC (40.7128° N, 74.0060° W)</span>
               </div>
               <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-                ● STATUS: GRADUATE CS @ NYU
+                ● STATUS: GRADUATE CS @ NYU · SEEKING NEW GRAD ROLES
               </div>
             </div>
           </div>
