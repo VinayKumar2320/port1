@@ -37,7 +37,7 @@ export const AboutJourney: React.FC = () => {
       title: 'Graduate Studies in Computer Science',
       institution: 'NYU Tandon School of Engineering',
       details:
-        'Focusing on Distributed Systems, AI Platform Infrastructure, and Operations Research. Building high-consequence systems like FraudGraph (sub-5ms streaming fraud intelligence) and MedFlow (SimPy 4.1 hospital digital twin).',
+        'Maintaining a 3.67 / 4.0 GPA with coursework in Deep Learning Systems, Machine Learning for Signal Processing, Big Data Analytics, and Distributed Systems. Building high-consequence systems like FraudGraph and MedFlow.',
     },
   ];
 

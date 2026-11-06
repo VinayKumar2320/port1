@@ -163,7 +163,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
         outputNode = (
           <div className="space-y-2 text-slate-300">
             <div className="text-amber-400 font-bold">ACADEMIC CREDENTIALS:</div>
-            <div>• <span className="text-white font-semibold">M.S. in Computer Science</span> — New York University (2025–2027)</div>
+            <div>• <span className="text-white font-semibold">M.S. in Computer Science</span> — New York University (2025–2027, GPA: 3.67/4.0)</div>
             <div>• <span className="text-white font-semibold">B.E. in Artificial Intelligence & ML</span> — BNMIT Bangalore (2021–2025, CGPA: 8.69/10)</div>
           </div>
         );
@@ -177,7 +177,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
       case 'contact':
         outputNode = (
           <div className="space-y-1 text-slate-300">
-            <div>Email: <a href="mailto:vinaykumarmd02@gmail.com" className="text-cyan-400 underline">vinaykumarmd02@gmail.com</a></div>
+            <div>Email: <a href="mailto:vk2771@nyu.edu" className="text-cyan-400 underline">vk2771@nyu.edu</a> / <a href="mailto:vinaykumarmd02@gmail.com" className="text-cyan-400 underline">vinaykumarmd02@gmail.com</a></div>
             <div>Status: <span className="text-emerald-400 font-semibold">Currently seeking New Grad roles</span></div>
             <div>LinkedIn: <a href="https://www.linkedin.com/in/vinay-kumar-md-9196711b8/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">linkedin.com/in/vinay-kumar-md-9196711b8</a></div>
             <div>GitHub: <a href="https://github.com/VinayKumar2320" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">github.com/VinayKumar2320</a></div>
@@ -190,8 +190,8 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
           outputNode = (
             <div className="space-y-2 text-slate-300 text-xs">
               <div className="text-emerald-400 font-bold">VINAY KUMAR — RESUME SUMMARY</div>
-              <div>M.S. Computer Science @ NYU Tandon (2025-2027) · B.E. AI/ML BNMIT (CGPA: 8.69)</div>
-              <div>Software Dev Intern @ Healium (NY) · Data Science Intern @ KreditBee · ML Intern @ 369 Data</div>
+              <div>M.S. Computer Science @ NYU Tandon (2025-2027, GPA: 3.67) · B.E. AI/ML BNMIT (CGPA: 8.69)</div>
+              <div>LMS Specialist @ NYU IT · ML Systems Intern @ Healium · ML Intern @ KreditBee · ML Intern @ 369 Data</div>
               <div>1 Patent · 8 Published Papers · Smart India Hackathon 2nd Place · IIT Bombay Techfest Top 5</div>
               <div className="pt-1">
                 <a href="/Vinay_Kumar_Resume.pdf" download className="text-amber-400 font-bold underline">

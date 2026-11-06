@@ -66,7 +66,7 @@ export const RecruiterModeView: React.FC<RecruiterModeViewProps> = ({ onExitRecr
                 Software & AI/ML Systems Engineer · M.S. Computer Science @ NYU Tandon
               </p>
               <p className="text-sm text-muted-foreground mt-3 max-w-2xl leading-relaxed">
-                Graduate student at New York University specializing in distributed systems, real-time graph intelligence, and simulation engineering. 3 industry internships (Healium, KreditBee, 369 Data), 1 patent, 8 peer-reviewed research papers. <span className="text-foreground font-semibold">Currently seeking New Grad roles in Software Engineering, AI/ML Systems, and Distributed Systems.</span>
+                Graduate student at New York University (GPA: 3.67) specializing in distributed systems, autonomous agents, and high-throughput ML pipelines. LMS Specialist @ NYU IT, 3 machine learning internships (Healium, KreditBee, 369 Data), 1 patent, 8 peer-reviewed research papers. <span className="text-foreground font-semibold">Currently seeking New Grad roles in Software Engineering, AI/ML Systems, and Distributed Systems.</span>
               </p>
             </div>
 
@@ -78,8 +78,8 @@ export const RecruiterModeView: React.FC<RecruiterModeViewProps> = ({ onExitRecr
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-muted-foreground" />
-                <a href="mailto:vinaykumarmd02@gmail.com" className="text-cobalt hover:underline">
-                  vinaykumarmd02@gmail.com
+                <a href="mailto:vk2771@nyu.edu" className="text-cobalt hover:underline">
+                  vk2771@nyu.edu
                 </a>
               </div>
               <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold">

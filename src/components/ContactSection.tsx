@@ -45,19 +45,26 @@ export const ContactSection: React.FC = () => {
                       <span>PRIMARY EMAIL</span>
                     </div>
                     <div className="text-base font-bold text-foreground font-mono mt-1 break-all">
-                      vinaykumarmd02@gmail.com
+                      vk2771@nyu.edu
+                    </div>
+                    <div className="text-xs text-muted-foreground font-mono mt-0.5 break-all">
+                      alt: vinaykumarmd02@gmail.com
                     </div>
                   </div>
                   <div className="flex items-center gap-2 pt-2">
                     <a
-                      href="mailto:vinaykumarmd02@gmail.com"
+                      href="mailto:vk2771@nyu.edu"
                       className="px-3 py-1.5 rounded-lg bg-cobalt hover:bg-cobalt-dark text-white font-mono text-xs font-semibold flex items-center gap-1.5 transition-all"
                     >
                       <Send className="w-3 h-3" /> Compose
                     </a>
                     <button
                       type="button"
-                      onClick={copyEmail}
+                      onClick={() => {
+                        navigator.clipboard.writeText('vk2771@nyu.edu');
+                        setCopied(true);
+                        setTimeout(() => setCopied(false), 2000);
+                      }}
                       className="px-3 py-1.5 rounded-lg border border-border bg-background hover:bg-secondary text-foreground font-mono text-xs flex items-center gap-1.5 transition-all"
                     >
                       {copied ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}

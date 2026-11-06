@@ -18,79 +18,104 @@ export interface ExperienceItem {
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    id: "healium",
-    role: "Software Developer Intern",
-    company: "Healium Intelliscan Corp",
+    id: "nyu-it",
+    role: "Learning Management System (LMS) Specialist",
+    company: "NYU Information Technology (NYU IT)",
     location: "New York, NY",
-    period: "2025",
-    startDate: "2025-01",
+    period: "Jan 2026 – Present",
+    startDate: "2026-01",
     endDate: "Present",
     current: true,
     type: "industry",
     summary:
-      "Engineering real-time high-throughput medical image processing pipelines and computer vision diagnostic algorithms in Python, PyTorch, and OpenCV.",
+      "Architecting autonomous agentic workflows and automated prompt-chaining pipelines to ingest, summarize, and categorize unstructured faculty consultations across enterprise instructional software.",
     problem:
-      "Clinical diagnostic systems require low-latency preprocessing and inference across high-resolution medical imaging scans without introducing artifact distortions or memory leaks under batch loads.",
+      "Enterprise instructional platforms receive thousands of unstructured faculty technical inquiries, creating triage bottlenecks, manual routing overhead, and variable response latencies.",
     built:
-      "Architected optimized medical image transformation pipelines, automated quality-control heuristics, and integrated deep learning inference engines for clinician decision support.",
+      "Architected autonomous multi-agent ingestion workflows using Python and LLM APIs, and engineered prompt-chaining evaluation scripts with strict JSON schema outputs for deterministic incident triage.",
     hurdles:
-      "Optimizing memory allocation and GPU tensor caching during high-resolution multi-slice volumetric reconstructions to prevent OOM errors.",
+      "Ensuring strict JSON schema adherence and deterministic output quality across highly ambiguous, multi-domain instructional software queries.",
     outcomes: [
-      "Reduced image preprocessing latency by 79% through vectorized parallel tensor operations and memory mapping.",
-      "Engineered real-time computer vision feature extractors for clinical diagnostic tools.",
-      "Stabilized high-throughput streaming pipelines for automated image quality triage."
+      "Architected autonomous agentic workflows using Python and LLM APIs to ingest, summarize, and categorize unstructured faculty consultations, expediting resolution velocity.",
+      "Built automated prompt-chaining evaluation scripts with strict JSON schema outputs to triage technical incidents, cutting manual routing overhead and ensuring deterministic operational telemetry.",
+      "Integrated operational monitoring to track pipeline routing precision and automate escalation queues."
     ],
-    tech: ["Python", "PyTorch", "OpenCV", "Medical Imaging", "NumPy", "Docker", "Linux"]
+    tech: ["Python", "LLM APIs", "LangChain / Agents", "JSON Schema", "Prompt Engineering", "Operational Telemetry", "Enterprise SaaS"]
   },
   {
-    id: "kreditbee",
-    role: "Data Science Intern",
-    company: "KreditBee",
-    location: "Bangalore, India",
-    period: "Sep 2024 – Jan 2025",
-    startDate: "2024-09",
-    endDate: "2025-01",
+    id: "healium",
+    role: "Machine Learning Systems Intern",
+    company: "Healium Intelliscan",
+    location: "India",
+    period: "Mar 2025 – May 2025",
+    startDate: "2025-03",
+    endDate: "2025-05",
     current: false,
     type: "industry",
     summary:
-      "Engineered a real-time biometric liveliness detection platform using Convolutional Neural Networks and transfer learning for high-consequence fraud prevention.",
+      "Constructed deep learning computer vision pipelines in PyTorch for renal ultrasound analysis, applying CLAHE, deep feature extractors, and ONNX Runtime inference optimization.",
+    problem:
+      "Clinical diagnostic systems require low-latency preprocessing and inference across high-resolution medical imaging scans without acoustic noise distortion or excessive memory consumption under volumetric batch loads.",
+    built:
+      "Constructed CV pipelines in PyTorch for renal ultrasound analysis; trained EfficientNet-B7 deep feature extraction networks and XGBoost ensembles; engineered distributed data loaders and batch inference routines using ONNX Runtime.",
+    hurdles:
+      "Mitigating acoustic noise and speckle across 80K frames while preventing GPU memory bottlenecks during multi-slice volumetric evaluation.",
+    outcomes: [
+      "Constructed CV pipelines in PyTorch for renal ultrasound analysis, applying CLAHE across 80K frames and geometric augmentations across 40K scans to mitigate acoustic noise and speckle.",
+      "Trained deep feature extraction networks (EfficientNet-B7) and gradient-boosted ensembles (XGBoost) for structural pathology localization, boosting out-of-distribution F1 score by 14%.",
+      "Engineered distributed data loaders and batch inference routines using ONNX Runtime, reducing end-to-end model latency by 79% and memory consumption by 35% during multi-slice volumetric evaluation."
+    ],
+    tech: ["Python", "PyTorch", "ONNX Runtime", "EfficientNet-B7", "XGBoost", "OpenCV", "CLAHE", "Medical Imaging", "NumPy"]
+  },
+  {
+    id: "kreditbee",
+    role: "Machine Learning Intern",
+    company: "KreditBee",
+    location: "India",
+    period: "Sep 2024 – Dec 2024",
+    startDate: "2024-09",
+    endDate: "2024-12",
+    current: false,
+    type: "industry",
+    summary:
+      "Trained and deployed real-time identity anti-spoofing classifiers in Python and TensorFlow/Keras across high-concurrency verification streams to halt presentation attacks.",
     problem:
       "Digital lending onboarding faces presentation attacks, spoofing attempts, and identity falsification that bypass static KYC validation checks.",
     built:
-      "Developed an end-to-end computer vision liveliness detection service with transfer learning, custom attention heads, and hyperparameter tuning deployed via Docker on AWS.",
+      "Engineered real-time identity anti-spoofing models with hard-negative mining routines and multi-task loss functions; quantized convolutional weights to INT8 for edge execution.",
     hurdles:
-      "Mitigating false rejections caused by varying lighting conditions, low-end mobile front cameras, and motion blur during live verification.",
+      "Mitigating false rejections caused by varying lighting conditions and sensor noise while maintaining strict sub-50ms execution on CPU nodes.",
     outcomes: [
-      "Cut biometric false positives by 76%, substantially improving genuine customer conversion and reducing manual audit load.",
-      "Enhanced detection accuracy by over 15% through batch normalization, dropout calibration, and data augmentation.",
-      "Containerized and deployed inference service with Docker and AWS for scalable production traffic."
+      "Trained and deployed real-time identity anti-spoofing classifiers in Python and TensorFlow/Keras across high-concurrency verification streams to halt presentation attacks.",
+      "Formulated hard-negative mining routines and multi-task loss functions across face embeddings, reducing presentation spoof attack error rates by 76% across production benchmarks.",
+      "Optimized inference throughput by quantizing convolutional model weights to INT8, achieving sub-45ms execution on edge CPU nodes."
     ],
-    tech: ["Python", "TensorFlow", "OpenCV", "CNNs", "Transfer Learning", "AWS", "Docker", "Scikit-learn"]
+    tech: ["Python", "TensorFlow", "Keras", "Model Quantization (INT8)", "OpenCV", "Hard-Negative Mining", "Face Embeddings", "AWS", "Docker"]
   },
   {
     id: "369data",
     role: "Machine Learning Intern",
-    company: "369 Data Solution PTE. LTD",
-    location: "Bangalore, India",
+    company: "369 Data Solutions",
+    location: "India",
     period: "Sep 2023 – Dec 2023",
     startDate: "2023-09",
     endDate: "2023-12",
     current: false,
     type: "industry",
     summary:
-      "Developed automated deep learning computer vision models to identify protein crystal structures and expedite pharmaceutical drug discovery pipelines.",
+      "Trained and evaluated ResNet and VGG backbone models in PyTorch for automated defect verification across high-variance crystallization imagery.",
     problem:
-      "Biochemists manually reviewed thousands of microscopic crystallization droplets to identify micro-crystals, creating a severe operational bottleneck in high-throughput drug screening.",
+      "High-variance crystallization imagery requires automated defect and crystal structure verification without high false-positive rates that contaminate downstream analytical pipelines.",
     built:
-      "Trained, benchmarked, and evaluated five deep neural network architectures (Custom CNNs, ResNet, VGG, Inception, and DenseNet) on microscopic crystal image sets.",
+      "Authored end-to-end training and inference scripts across 5 experimental architectures (ResNet, VGG); engineered confidence-calibration and out-of-distribution (OOD) rejection layers.",
     hurdles:
-      "Severe class imbalance between clear droplets, amorphous precipitate, phase separation, and actual crystalline formations.",
+      "Severe morphological variation and image noise in crystallization droplets leading to false positive classifications.",
     outcomes: [
-      "Selected the optimal deep model, boosting crystal detection accuracy by over 15% compared to prior baseline classifiers.",
-      "Reduced manual inspection effort by 50% and slashed data processing time by 30% through automated image analysis pipelines.",
-      "Collaborated closely with biochemistry domain specialists to validate classification edge cases."
+      "Trained and evaluated ResNet and VGG backbone models in PyTorch for automated defect verification across high-variance crystallization imagery.",
+      "Engineered confidence-calibration and out-of-distribution rejection layers that curbed false-positive classifications by 85% across test batches, safeguarding downstream analytical workflows.",
+      "Authored end-to-end training and inference scripts, establishing reproducible evaluation pipelines across 5 experimental model architectures."
     ],
-    tech: ["Python", "Keras", "TensorFlow", "ResNet", "DenseNet", "OpenCV", "NumPy", "Pandas"]
+    tech: ["Python", "PyTorch", "ResNet", "VGG", "Confidence Calibration", "OOD Rejection", "OpenCV", "NumPy", "Pandas"]
   },
   {
     id: "hsiao-bnmit",
