@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PROJECTS, Project } from '@/data/projects';
+import { AeroNavSimulator } from './simulators/AeroNavSimulator';
 import { FraudGraphSimulator } from './simulators/FraudGraphSimulator';
 import { MedFlowSimulator } from './simulators/MedFlowSimulator';
 import { CodeImpactSimulator } from './simulators/CodeImpactSimulator';
@@ -132,8 +133,8 @@ export const ProjectPlayground: React.FC = () => {
         {activeView === 'gallery' && (
           <div className="space-y-12">
             {/* Top Project Selector Tabs */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {filteredProjects.slice(0, 4).map((p) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              {filteredProjects.slice(0, 5).map((p) => (
                 <button
                   key={p.id}
                   type="button"
@@ -239,6 +240,7 @@ export const ProjectPlayground: React.FC = () => {
                     <span>(Real-Time Browser Simulation of Core System Dynamics)</span>
                   </div>
 
+                  {activeProject.simulatorType === 'aeronav' && <AeroNavSimulator />}
                   {activeProject.simulatorType === 'fraud' && <FraudGraphSimulator />}
                   {activeProject.simulatorType === 'hospital' && <MedFlowSimulator />}
                   {activeProject.simulatorType === 'risk' && <CodeImpactSimulator />}

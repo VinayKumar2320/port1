@@ -31,7 +31,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
         <div className="space-y-1 text-slate-300">
           <div className="text-emerald-400 font-bold">VINAY.EXE UNIX TERMINAL [Version 2.6.0]</div>
           <div>Type <span className="text-amber-400 font-bold">help</span> to list available commands.</div>
-          <div>Try: <span className="text-cyan-400">projects</span>, <span className="text-cyan-400">simulate fraud</span>, <span className="text-cyan-400">cat resume</span></div>
+          <div>Try: <span className="text-cyan-400">projects</span>, <span className="text-cyan-400">simulate aeronav</span>, <span className="text-cyan-400">cat resume</span></div>
         </div>
       ),
     },
@@ -76,7 +76,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
             <div className="grid grid-cols-2 gap-2 max-w-md pt-1">
               <div><span className="text-cyan-400 font-semibold">about</span> : Brief biography & NYU journey</div>
               <div><span className="text-cyan-400 font-semibold">projects</span> : List all engineering systems</div>
-              <div><span className="text-cyan-400 font-semibold">simulate &lt;type&gt;</span> : Launch simulator (fraud|hospital|risk)</div>
+              <div><span className="text-cyan-400 font-semibold">simulate &lt;type&gt;</span> : Launch simulator (aeronav|fraud|hospital|risk)</div>
               <div><span className="text-cyan-400 font-semibold">experience</span> : Career history & roles</div>
               <div><span className="text-cyan-400 font-semibold">publications</span> : Patent & 8 research papers</div>
               <div><span className="text-cyan-400 font-semibold">education</span> : NYU & BNMIT credentials</div>
@@ -116,7 +116,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
         break;
 
       case 'simulate':
-        if (arg === 'fraud' || arg === 'hospital' || arg === 'risk') {
+        if (arg === 'aeronav' || arg === 'drone' || arg === 'fraud' || arg === 'hospital' || arg === 'risk') {
           outputNode = (
             <div className="text-emerald-400">
               Launching interactive simulator for <span className="font-bold underline">{arg}</span> in the Project Playground...
@@ -129,7 +129,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({
         } else {
           outputNode = (
             <div className="text-orange-400">
-              Unknown simulation target. Try: <span className="text-white">simulate fraud</span>, <span className="text-white">simulate hospital</span>, or <span className="text-white">simulate risk</span>.
+              Unknown simulation target. Try: <span className="text-white">simulate aeronav</span>, <span className="text-white">simulate fraud</span>, <span className="text-white">simulate hospital</span>, or <span className="text-white">simulate risk</span>.
             </div>
           );
         }

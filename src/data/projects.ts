@@ -20,10 +20,47 @@ export interface Project {
     apiDocs?: string;
     paper?: string;
   };
-  simulatorType?: 'fraud' | 'hospital' | 'risk' | 'pde';
+  simulatorType?: 'fraud' | 'hospital' | 'risk' | 'pde' | 'aeronav';
 }
 
 export const PROJECTS: Project[] = [
+  {
+    id: "aeronav",
+    title: "AeroNav",
+    tagline: "Robust Vision-Based Autonomous Drone Navigation Under Perception Uncertainty",
+    category: "simulation",
+    categoryLabel: "Autonomous Robotics & 3D Vision",
+    featured: true,
+    date: "2026",
+    summary:
+      "Research-grade closed-loop autonomous quadrotor navigation architecture that explicitly reasons about visual perception uncertainty (σ_z² ∝ z⁴) to achieve collision-free flight under noisy and incomplete camera observations with C++17 acceleration.",
+    impactMetrics: [
+      { label: "Collision Rate", value: "0.0% vs 66.7%", detail: "Uncertainty-aware motion planning eliminates fatal corner-cutting in dense obstacle fields" },
+      { label: "Goal Success Rate", value: "100.0%", detail: "Zero collisions across dense clutter under range-dependent sensor noise" },
+      { label: "C++17 Raycasting", value: "306.5x", detail: "Raycasting accelerated from 356.5ms to 1.16ms via Modern C++17, Eigen3 & Pybind11" },
+      { label: "Native 3D A*", value: "82.5 µs", detail: "Sub-millisecond 100×60×20 grid search, 40.6x faster than pure Python" }
+    ],
+    architecture: {
+      overview:
+        "Modular perception-to-action pipeline: 6-DOF quadrotor physics (Runge-Kutta 4, cascaded PID), stereo depth perception with range-squared error modeling, probabilistic 3D voxel occupancy mapping with Amanatides-Woo DDA raycasting, risk-weighted A* search with adaptive obstacle inflation, and Modern C++17 native acceleration via Pybind11 with an interactive Three.js 3D web laboratory.",
+      flowSteps: [
+        "6-DOF quadrotor simulation and sensor noise injection (range-squared variance σ_z² ∝ z⁴, dropouts, occlusions)",
+        "Stereo disparity estimation (SGBM / Block Matching) and 3D point cloud back-projection",
+        "Perception uncertainty estimation aggregating distance variance and photometric confidence",
+        "Probabilistic 3D voxel occupancy mapping via log-odds updates and Amanatides-Woo DDA raycasting",
+        "Risk-weighted A* and adaptive obstacle inflation motion planning avoiding high-uncertainty boundaries",
+        "Cascaded PID trajectory tracking control and replanning state machine"
+      ],
+      keyChallenge:
+        "Stereo triangulation variance scales quartically with distance (σ_z² ∝ z⁴), causing conventional occupancy planners to graze noisy obstacle boundaries and incur fatal corner-cutting collisions."
+    },
+    tech: ["Python 3.12", "C++17", "PyTorch (Apple Silicon MPS)", "Eigen3", "Pybind11", "Three.js", "React", "Vite", "6-DOF Dynamics"],
+    links: {
+      github: "https://github.com/VinayKumar2320/AeroNav-Uncertainty-Aware-Drone-Navigation",
+      liveDemo: "https://VinayKumar2320.github.io/AeroNav-Uncertainty-Aware-Drone-Navigation/"
+    },
+    simulatorType: "aeronav"
+  },
   {
     id: "fraudgraph",
     title: "FraudGraph",
