@@ -1,21 +1,7 @@
 {
-  "lastSyncTimestamp": "2026-11-06T05:42:49.308Z",
+  "lastSyncTimestamp": "2026-11-07T05:12:44.387Z",
   "totalPublicRepos": 36,
   "repositories": [
-    {
-      "id": 1448807047,
-      "name": "AeroNav-Uncertainty-Aware-Drone-Navigation",
-      "fullName": "VinayKumar2320/AeroNav-Uncertainty-Aware-Drone-Navigation",
-      "description": "Research-grade autonomous drone navigation combining uncertainty-aware visual perception, probabilistic 3D mapping, motion planning, and closed-loop quadrotor control.",
-      "url": "https://github.com/VinayKumar2320/AeroNav-Uncertainty-Aware-Drone-Navigation",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python / C++",
-      "isFork": false,
-      "updatedAt": "2026-11-06T23:48:55Z",
-      "pushedAt": "2026-11-06T23:48:51Z",
-      "topics": ["quadrotor", "drone-navigation", "uncertainty-aware", "computer-vision", "path-planning", "cpp17"]
-    },
     {
       "id": 1283271330,
       "name": "ABI-Healthcare",
@@ -42,6 +28,20 @@
       "isFork": true,
       "updatedAt": "2023-05-28T04:01:59Z",
       "pushedAt": "2023-05-28T03:25:57Z",
+      "topics": []
+    },
+    {
+      "id": 1448807047,
+      "name": "AeroNav-Uncertainty-Aware-Drone-Navigation",
+      "fullName": "VinayKumar2320/AeroNav-Uncertainty-Aware-Drone-Navigation",
+      "description": "Research-grade autonomous drone navigation combining uncertainty-aware visual perception, probabilistic 3D mapping, motion planning, and closed-loop quadrotor control.",
+      "url": "https://github.com/VinayKumar2320/AeroNav-Uncertainty-Aware-Drone-Navigation",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "isFork": false,
+      "updatedAt": "2026-11-06T23:48:55Z",
+      "pushedAt": "2026-11-06T23:48:51Z",
       "topics": []
     },
     {
@@ -343,8 +343,8 @@
       "forks": 0,
       "language": "TypeScript",
       "isFork": false,
-      "updatedAt": "2026-11-05T22:04:26Z",
-      "pushedAt": "2026-11-05T22:04:22Z",
+      "updatedAt": "2026-11-07T00:02:01Z",
+      "pushedAt": "2026-11-07T00:01:57Z",
       "topics": []
     },
     {
