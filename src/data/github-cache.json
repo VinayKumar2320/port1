@@ -1,6 +1,6 @@
 {
-  "lastSyncTimestamp": "2026-11-18T06:32:32.775Z",
-  "totalPublicRepos": 38,
+  "lastSyncTimestamp": "2026-11-19T06:33:51.395Z",
+  "totalPublicRepos": 39,
   "repositories": [
     {
       "id": 1283271330,
@@ -320,6 +320,32 @@
       "topics": []
     },
     {
+      "id": 1463019917,
+      "name": "NetworkPath-AI",
+      "fullName": "VinayKumar2320/NetworkPath-AI",
+      "description": "An open-source professional network intelligence platform for exploring LinkedIn connections, visualizing company networks, discovering verified introduction paths, and identifying referral opportunities.",
+      "url": "https://github.com/VinayKumar2320/NetworkPath-AI",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "isFork": false,
+      "updatedAt": "2026-11-18T16:00:42Z",
+      "pushedAt": "2026-11-18T17:01:52Z",
+      "topics": [
+        "career-tools",
+        "cytoscape",
+        "fastapi",
+        "graph-algorithms",
+        "linkedin",
+        "network-visualization",
+        "networkx",
+        "open-source",
+        "python",
+        "react",
+        "typescript"
+      ]
+    },
+    {
       "id": 643541174,
       "name": "Object_Detector",
       "fullName": "VinayKumar2320/Object_Detector",
@@ -358,7 +384,7 @@
       "language": "TypeScript",
       "isFork": false,
       "updatedAt": "2026-11-12T07:23:21Z",
-      "pushedAt": "2026-11-17T07:08:13Z",
+      "pushedAt": "2026-11-18T06:32:39Z",
       "topics": []
     },
     {
